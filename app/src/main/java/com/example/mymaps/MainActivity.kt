@@ -13,11 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val userMap = generateSampleData()
         // Layout manager
         rvMaps.layoutManager = LinearLayoutManager(this)
 
         // adapter
-        rvMaps.adapter = MapsAdapter(this, emptyList<UserMap>())
+        rvMaps.adapter = MapsAdapter(this, userMap)
 
     }
 
